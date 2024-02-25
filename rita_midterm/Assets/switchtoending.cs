@@ -5,19 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class switchtoending : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public GameObject player;
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     void SwitchScene()
     {
         Debug.Log("Scene is loading");
@@ -25,8 +12,6 @@ public class switchtoending : MonoBehaviour
     }
     private void OnTriggerEnter(Collider player_collision)
     {
-
-
         if (player_collision.CompareTag("Player"))
         {
             Debug.Log("You collide");

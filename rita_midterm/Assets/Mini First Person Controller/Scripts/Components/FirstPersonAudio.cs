@@ -121,7 +121,10 @@ public class FirstPersonAudio : MonoBehaviour
     void SubscribeToEvents()
     {
         // PlayLandingAudio when Grounded.
-        groundCheck.Grounded += PlayLandingAudio;
+        if (groundCheck)
+        {
+            groundCheck.Grounded += PlayLandingAudio;
+        }
 
         // PlayJumpAudio when Jumped.
         if (jump)
@@ -140,7 +143,10 @@ public class FirstPersonAudio : MonoBehaviour
     void UnsubscribeToEvents()
     {
         // Undo PlayLandingAudio when Grounded.
-        groundCheck.Grounded -= PlayLandingAudio;
+        if (groundCheck)
+        {
+            groundCheck.Grounded -= PlayLandingAudio;
+        }
 
         // Undo PlayJumpAudio when Jumped.
         if (jump)
